@@ -1,0 +1,13 @@
+{{#if username}}
+<h3>Hello, {{username}}</h3>
+<p>Behold the <a href="/user-only">secret</a></p>
+
+<form action="/user/logout" method="post">
+    <button type="submit">Logout</button>
+</form>
+{{else}}
+<h3>Hello, guest!</h3>
+<p><a href="/user/register">Register</a> or <a href="/user/login">Login</a></p>
+<p>Go to <a href="/user-only">top secret information</a></p>
+{{/if}}
+

@@ -1,0 +1,22 @@
+<h3>Login</h3>
+{{#if message}}
+<p><u>{{message}}</u></p>
+<p>Please fill the form</p>
+{{else}}
+<p>Please fill the form</p>
+{{/if}}
+<main>
+    <form action="/user/login" method="POST">
+        <div>
+            <label for="username">Username:</label>
+            <input type="text" name="username" id="username" placeholder="Username" />
+        </div>        
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password" />
+        </div>
+        <button type="submit">Login</button>
+    </form>
+    <p><a href="/user/register">Register</a></p>
+    <p>Go back <a href="/">home</a></p>
+</main>
